@@ -1,0 +1,46 @@
+.launch-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .mission-patch {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  .mission-patch img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .launch-details h3 {
+    margin-top: 0;
+  }
+  
+  .launch-details p {
+    margin-bottom: 5px;
+  }
+  
+  ul {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .launch-item {
+    cursor: pointer;
+  }
+  
+  .launch-item:hover {
+    background-color: #f9f9f9;
+  }
+  

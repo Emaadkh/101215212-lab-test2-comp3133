@@ -1,0 +1,23 @@
+<ul>
+  <div class="filter">
+    <mat-form-field appearance="fill">
+      <mat-label>Filter by Launch Year:</mat-label>
+      <input matInput type="text" id="year" name="year" [(ngModel)]="year">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="searchByYear()">Search</button>
+    <button mat-raised-button (click)="showAll()">All</button>
+  </div>
+  <li *ngFor="let launch of launches">
+    <div class="launch-item" (click)="selectedMission = launch">
+      <div class="mission-patch">
+        <img src="{{ launch.links.mission_patch_small }}" alt="{{ launch.mission_name }} mission patch">
+      </div>
+      <div class="launch-details">
+        <h3>{{ launch.mission_name }}</h3>
+        <p><strong>Launch Year:</strong> {{ launch.launch_year }}</p>
+        <p><strong>Details:</strong> {{ launch.details }}</p>
+      </div>
+      <app-mission-details *ngIf="selectedMission === launch" [flightNumber]="launch.flight_number"></app-mission-details>
+    </div>
+  </li>
+</ul>
